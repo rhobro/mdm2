@@ -24,14 +24,14 @@ def load_with_columns(cols=None):
 
 def summarise_cnf(cnf):
     accuracy = np.diagonal(cnf).sum() / cnf.sum()
-    print(f"Accuracy: {accuracy}")
+    # print(f"Accuracy: {accuracy}")
     precision = cnf[1, 1] / cnf[:, 1].sum()
-    print(f"Precision: {precision}")
+    # print(f"Precision: {precision}")
     sensitivity = cnf[1, 1] / cnf[1].sum()
     print(f"Sensitivity: {sensitivity}")
     specificity = cnf[0, 0] / cnf[0].sum()
     print(f"Specificity: {specificity}")
-    print(cnf)
+    # print(cnf)
 
 def rand_seed():
     return randint(0, 1000)
